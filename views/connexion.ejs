@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Connexion/Inscription - Zombieland</title>
+    <link rel="stylesheet" href="/css/connexion.css">
+    <link href="https://fonts.googleapis.com/css2?family=Creepster&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Sedan+SC&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <img src="/images/logo.png" alt="Logo de Zombieland" style="width: 150px;">
+        <nav>
+            <ul id="nav-links" aria-label="Navigation principale">
+                <li><a href="/">Accueil</a></li>
+                <li><a href="/attractions">Attractions</a></li>
+                <li><a href="/reservations">Réservations</a></li>
+                <li><a href="/infos">Informations pratiques</a></li>
+                <li><a href="/contact">Contact</a></li>
+                <li><a href="/connexion" class="active">Inscription/Connexion</a></li>
+            </ul>
+            <img src="/assets/icons8-menu-48.png" id="hamburger" aria-label="Toggle menu" alt="Menu Hamburger" style="cursor: pointer; width: 40px;">
+        </nav>
+    </header>
+
+    <main>
+        <h1 class="creepy-text">Connexion / Inscription</h1>
+
+        <div class="form-container">
+            <section id="connexion-section">
+                <h2>Connexion</h2>
+                <form id="loginForm">
+                    <label for="email">Email :</label>
+                    <input type="email" id="email" name="email" required>
+
+                    <label for="password">Mot de passe :</label>
+                    <input type="password" id="password" name="password" required>
+
+                    <button type="submit">Se connecter</button>
+                </form>
+            </section>
+
+            <section id="inscription-section">
+                <h2>Inscription</h2>
+                <form id="registerForm">
+                    <label for="register-nom">Nom :</label>
+                    <input type="text" id="register-nom" name="nom" required>
+
+                    <label for="register-prenom">Prénom :</label>
+                    <input type="text" id="register-prenom" name="prenom" required>
+
+                    <label for="register-email">Email :</label>
+                    <input type="email" id="register-email" name="email" required>
+
+                    <label for="register-password">Mot de passe :</label>
+                    <input type="password" id="register-password" name="password" required>
+
+                    <label for="register-adresse">Adresse :</label>
+                    <input type="text" id="register-adresse" name="adresse" required>
+
+                    <button type="submit">S'inscrire</button>
+                </form>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <p>© 2024 Zombieland. Tous droits réservés.</p>
+    </footer>
+
+    <script src="/js/connexion.js"></script>
+</body>
+</html>

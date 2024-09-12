@@ -1,0 +1,46 @@
+{
+  "name": "projet-zombieland-bis",
+  "version": "1.0.0",
+  "description": "Site web pour la gestion d'un parc d'attractions sur les zombies.",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "dev": "nodemon app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "zombieland",
+    "amusement park",
+    "ticketing",
+    "reservation"
+  ],
+  "author": "AliceValesi",
+  "license": "ISC",
+  "dependencies": {
+    "animate.css": "^4.1.1",
+    "bcrypt": "^5.1.1",
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.20.2",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "ejs": "^3.1.10",
+    "express": "^4.21.0",
+    "express-session": "^1.18.0",
+    "helmet": "^7.1.0",
+    "jsonwebtoken": "^9.0.2",
+    "passport": "^0.7.0",
+    "passport-jwt": "^4.0.1",
+    "passport-local": "^1.0.0",
+    "path": "^0.12.7",
+    "pg": "^8.12.0",
+    "pg-hstore": "^2.3.4",
+    "sequelize": "^6.37.3"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.2",
+    "sequelize-cli": "^6.6.2"
+  },
+  "directories": {
+    "test": "tests"
+  }
+}

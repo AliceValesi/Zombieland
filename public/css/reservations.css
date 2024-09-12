@@ -1,0 +1,294 @@
+/* Styles généraux */
+body {
+    font-family: 'Sedan SC', serif;
+    font-size: 20px;
+    background-color: #1a1a1a;
+    color: #597581;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #252525;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header img {
+    width: 150px;
+    height: auto;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+nav li {
+    margin-right: 20px;
+}
+
+nav a {
+    color: #697c89;
+    text-decoration: none;
+    transition: color 0.3s ease;
+    text-shadow: 2px 2px 5px #000000;
+}
+
+nav a.active,
+nav a:hover {
+    color: #4c555b;
+}
+
+#hamburger {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    nav ul {
+        display: none;
+        flex-direction: column;
+    }
+
+    #hamburger {
+        display: block;
+    }
+}
+
+main {
+    text-align: center;
+    padding: 20px;
+}
+
+.creepy-text {
+    font-family: 'Creepster', cursive;
+    font-size: 70px;
+    text-shadow: 2px 2px 8px #000000;
+    margin-bottom: 30px;
+}
+
+/* Formulaire de réservation */
+.reservation-form {
+    background-color: #252525;
+    padding: 25px;
+    margin: 0 auto;
+    width: 90%;
+    max-width: 500px;
+    border-radius: 10px;
+    box-shadow: 0 10px 20px rgb(0, 0, 0);
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.reservation-form label {
+    text-align: left;
+    color: #ffffff;
+}
+
+.reservation-form select,
+.reservation-form input[type="number"],
+.reservation-form input[type="checkbox"],
+.reservation-form button {
+    padding: 10px;
+    margin: 10px 0;
+    background-color: #404c53;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+}
+
+.reservation-form button {
+    background-color: #7f0808;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+/* Pied de page */
+footer {
+    background-color: #252525;
+    color: rgb(255, 255, 255);
+    text-align: center;
+    padding: 10px;
+    margin-top: 40px;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.8);
+    position: relative;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+/* Animation du bouton */
+.animated-button1 {
+    background: linear-gradient(-30deg, #3d0b0b 50%, #2b0808 50%);
+    padding: 15px 30px;
+    margin: 12px;
+    display: inline-block;
+    transform: translate(0%, 0%);
+    overflow: hidden;
+    color: #f7d4d4;
+    font-size: 20px;
+    letter-spacing: 2.5px;
+    text-align: center;
+    text-transform: uppercase;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.animated-button1:hover {
+    background: linear-gradient(-30deg, #4e0c0c 50%, #3c0909 50%);
+    transform: scale(1.05);
+}
+
+.animated-button1::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #ad8585;
+    opacity: 0;
+    transition: opacity 0.2s ease-in-out;
+}
+
+.animated-button1:hover::before {
+    opacity: 0.2;
+}
+
+.animated-button1 span {
+    position: absolute;
+}
+
+.animated-button1 span:nth-child(1) {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(to left, rgba(43, 8, 8, 0), #d92626);
+    animation: animateTop 2s linear infinite;
+}
+
+.animated-button1 span:nth-child(2) {
+    top: 0;
+    right: 0;
+    height: 100%;
+    width: 2px;
+    background: linear-gradient(to top, rgba(43, 8, 8, 0), #d92626);
+    animation: animateRight 2s linear -1s infinite;
+}
+
+.animated-button1 span:nth-child(3) {
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(to right, rgba(43, 8, 8, 0), #d92626);
+    animation: animateBottom 2s linear infinite;
+}
+
+.animated-button1 span:nth-child(4) {
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 2px;
+    background: linear-gradient(to bottom, rgba(43, 8, 8, 0), #d92626);
+    animation: animateLeft 2s linear -1s infinite;
+}
+
+@keyframes animateTop {
+    0% {
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+@keyframes animateRight {
+    0% {
+        transform: translateY(100%);
+    }
+    100% {
+        transform: translateY(-100%);
+    }
+}
+
+@keyframes animateBottom {
+    0% {
+        transform: translateX(-100%);
+    }
+    100% {
+        transform: translateX(100%);
+    }
+}
+
+@keyframes animateLeft {
+    0% {
+        transform: translateY(-100%);
+    }
+    100% {
+        transform: translateY(100%);
+    }
+}
+
+.switch-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 50px;
+    height: 25px;
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position:absolute;
+    cursor:pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #404c53;
+    transition: .4s;
+    border-radius: 25px;
+}
+
+.slider:before {
+    position:absolute;
+    content: "";
+    height: 21px;
+    width: 21px;
+    left: 2px;
+    bottom: 2px;
+    background-color: white;
+    transition: .4s;
+    border-radius: 50%;
+}
+
+input:checked + .slider {
+    background-color: #7f0808;
+}
+
+input:checked + .slider:before {
+    transform: translateX(25px);
+}

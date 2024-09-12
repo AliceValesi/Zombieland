@@ -1,0 +1,8 @@
+# Ignore les fichiers de configuration et temporaires
+*.log
+*.tmp
+
+node_modules/
+
+# Ignore les fichiers spécifiques aux éditeurs
+.vscode/

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accueil - Zombieland</title>
+    <link rel="stylesheet" href="/css/index.css">
+    <link href="https://fonts.googleapis.com/css2?family=Creepster&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <img src="/" alt="Logo de Zombieland">
+        <nav>
+            <ul id="nav-links" aria-label="Navigation principale">
+                <li><a href="/">Accueil</a></li>
+                <li><a href="/attractions">Attractions</a></li>
+                <li><a href="/reservations">Réservations</a></li>
+                <li><a href="/infos">Informations pratiques</a></li>
+                <li><a href="/contact">Contact</a></li>
+                <li><a href="/connexion">Inscription/Connexion</a></li>
+            </ul>
+            <img src="/assets/icons8-menu-48.png" id="hamburger" aria-label="Toggle menu" alt="Menu Hamburger" style="cursor: pointer; width: 40px;">
+        </nav>
+    </header>
+
+    <main>
+        <h1 class="creepy-text animate__animated animate__slideInDown">Bienvenue à Zombieland</h1>
+        <p>Zombieland n'est pas juste un parc d'attractions, c'est une expérience immersive dans un monde où les zombies règnent en maître.</p>
+
+        <a href="/reservations" id="reserveButton" class="animated-button1" aria-label="Réserver vos billets ici">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            Réservez ici
+        </a>
+
+        <!-- Diaporama d'images -->
+        <div class="slideshow-container">
+            <div class="mySlides fade">
+                <img src="/images/dead-encounter-1.png" alt="Dead Encounter, une attraction effrayante" style="width:60%;">
+            </div>
+            <div class="mySlides fade">
+                <img src="/images/feast-of-shadows-1.png" alt="Feast of Shadows, une attraction sombre et mystérieuse" style="width:60%;">
+            </div>
+            <div class="mySlides fade">
+                <img src="/images/undead-plunge-1.png" alt="Undead Plunge, une descente rapide dans le royaume des morts" style="width:60%;">
+            </div>
+            <div class="mySlides fade">
+                <img src="/images/zombie-parade-1.png" alt="Zombie Parade, une fête effrayante avec des zombies" style="width:60%;">
+            </div>
+            <div class="mySlides fade">
+                <img src="/images/zombie-thrill-1.png" alt="Zombie Thrill, une montagne russe terrifiante" style="width:60%;">
+            </div>
+        </div>
+        <br>
+        <div style="text-align:center">
+            <span class="dot" onclick="currentSlide(1)" aria-label="Aller à la première image"></span>
+            <span class="dot" onclick="currentSlide(2)" aria-label="Aller à la deuxième image"></span>
+            <span class="dot" onclick="currentSlide(3)" aria-label="Aller à la troisième image"></span>
+            <span class="dot" onclick="currentSlide(4)" aria-label="Aller à la quatrième image"></span>
+            <span class="dot" onclick="currentSlide(5)" aria-label="Aller à la cinquième image"></span>
+        </div>
+    </main>
+
+    <footer>
+        <p>Horaires d'ouverture : 9h - 18h</p>
+        <p>Localisation : La Tombe, Seine-et-Marne</p>
+        <p>Mesures de sécurité en place</p>
+    </footer>
+
+    <script src="/js/index.js"></script>
+</body>
+</html>

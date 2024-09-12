@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - Zombieland</title>
+    <link rel="stylesheet" href="/css/contact.css">
+    <link href="https://fonts.googleapis.com/css2?family=Creepster&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <img src="/images/logo.png" alt="Logo de Zombieland" width="150">
+        <nav>
+            <ul id="nav-links" aria-label="Navigation principale">
+                <li><a href="/">Accueil</a></li>
+                <li><a href="/attractions">Attractions</a></li>
+                <li><a href="/reservations">Réservations</a></li>
+                <li><a href="/infos">Informations pratiques</a></li>
+                <li><a href="/contact" class="active">Contact</a></li>
+                <li><a href="/connexion">Inscription/Connexion</a></li>
+            </ul>
+            <img src="/assets/icons8-menu-48.png" id="hamburger" aria-label="Menu hamburger" alt="Menu Hamburger" style="cursor: pointer; width: 40px;">
+        </nav>
+    </header>
+
+    <main>
+        <h1 class="creepy-text animate__animated animate__slideInDown">Contactez-nous</h1>
+        <div class="contact-form-container">
+            <form action="/send-message" method="POST">
+                <label for="name">Nom:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" rows="6" required></textarea>
+
+                <button type="submit" class="submit-btn">Envoyer</button>
+            </form>
+        </div>
+    </main>
+
+    <footer>
+        <p>© 2024 Zombieland. Tous droits réservés.</p>
+    </footer>
+
+    <script src="/js/navigation.js"></script>
+</body>
+</html>
