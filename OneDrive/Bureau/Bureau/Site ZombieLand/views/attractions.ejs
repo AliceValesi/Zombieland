@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Attractions - Zombieland</title>
+    <link rel="stylesheet" href="/css/attractions.css">
+    <link href="https://fonts.googleapis.com/css2?family=Creepster&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <img src="/images/logo.png" alt="Logo de Zombieland" width="150">
+        <nav>
+            <ul id="nav-links" aria-label="Navigation principale">
+                <li><a href="/">Accueil</a></li>
+                <li><a href="/attractions" class="active">Attractions</a></li>
+                <li><a href="/reservations">Réservations</a></li>
+                <li><a href="/infos">Informations pratiques</a></li>
+                <li><a href="/contact">Contact</a></li>
+                <li><a href="/connexion">Inscription/Connexion</a></li>
+            </ul>
+            <img src="/assets/icons8-menu-48.png" id="hamburger" aria-label="Menu hamburger" alt="Menu Hamburger" style="cursor: pointer; width: 40px;">
+        </nav>
+    </header>
+
+    <main>
+        <h1 class="creepy-text animate__animated animate__slideInDown">Attractions de Zombieland</h1>
+        <p>Liste complète des attractions du parc, des zones immersives et des restaurants avec des descriptions détaillées, des photos et des informations sur les horaires.</p>
+
+        <!-- Barre de recherche -->
+        <input type="text" id="search" placeholder="Rechercher par tag..." aria-label="Rechercher par tag">
+
+        <!-- Filtres par catégorie -->
+        <div class="filter-container">
+            <button class="filter" onclick="filterAttractions('all')">Tous</button>
+            <button class="filter" onclick="filterAttractions('manège')">Manège</button>
+            <button class="filter" onclick="filterAttractions('expérience immersive')">Expérience immersive</button>
+            <button class="filter" onclick="filterAttractions('rollercoaster')">Rollercoaster</button>
+            <button class="filter" onclick="filterAttractions('restaurant')">Restaurants</button>
+        </div>
+
+        <!-- Grille d'attractions -->
+        <section class="attraction-grid">
+            <% attractions.forEach((attraction) => { %>
+                <article class="attraction <%= attraction.category %>">
+                    <!-- Slideshow spécifique aux attractions -->
+                    <div class="slideshow-container attraction-slideshow" aria-label="Diaporama <%= attraction.name %>">
+                        <% attraction.images.forEach((image, index) => { %>
+                            <div class="mySlides <%= attraction.identifier %>">
+                                <img src="<%= image %>" alt="<%= attraction.name %> Image <%= index + 1 %>">
+                            </div>
+                        <% }); %>
+                        <a class="prev" href="javascript:void(0);" onclick="plusSlides(-1, '<%= attraction.identifier %>')" aria-label="Image précédente">&#10094;</a>
+                        <a class="next" href="javascript:void(0);" onclick="plusSlides(1, '<%= attraction.identifier %>')" aria-label="Image suivante">&#10095;</a>
+                    </div>
+                    <h2><%= attraction.name %></h2>
+                    <p><%= attraction.description %></p>
+                    <span class="tags"><%= attraction.tags.join(', ') %></span>
+                </article>
+            <% }); %>
+        </section>
+    </main>
+
+    <footer>
+        <p>Horaires d'ouverture : 9h - 18h</p>
+        <p>Localisation : La Tombe, Seine-et-Marne</p>
+        <p>Mesures de sécurité en place</p>
+    </footer>
+
+    <script src="/js/attractions.js"></script>
+</body>
+</html>

@@ -1,0 +1,197 @@
+/* Style global */
+body {
+    font-family: 'Sedan SC', serif;
+    background-color: #1a1a1a;
+    color: #cccccc;
+    margin: 0;
+    padding: 20px;
+    text-align: center;
+}
+
+header {
+    background-color: #252525;
+    color: #ffffff;
+    padding: 10px 0;
+}
+
+main {
+    margin: 30px auto;
+    padding: 20px;
+    max-width: 600px;
+    background-color: #333;
+    border-radius: 10px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+}
+
+h1 {
+    font-family: 'Creepster', cursive;
+    font-size: 48px;
+    color: #929292;
+}
+
+p {
+    font-size: 20px;
+    margin: 20px 0;
+}
+
+footer {
+    font-size: 16px;
+    color: #ffffff;
+    padding: 10px 0;
+    background-color: #252525;
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Bouton de retour à la page d'accueil */
+.back-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #4c555b;
+    color: #ffffff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+    text-transform: uppercase;
+}
+
+.back-button:hover {
+    background-color: #697c89;
+}
+
+/* Animation d'erreur subtile */
+@keyframes fade-in {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
+.error-animation {
+    animation: fade-in 1s ease-in-out;
+}
+
+/* Réponse visuelle pour l'accessibilité */
+a:focus,
+.back-button:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.5);
+}
+
+
+/* Bouton Animé avec Animation */
+.animated-button1 {
+    background: linear-gradient(-30deg, #3d0b0b 50%, #2b0808 50%);
+    padding: 15px 30px;
+    margin: 12px;
+    display: inline-block;
+    transform: translate(0%, 0%);
+    overflow: hidden;
+    color: #f7d4d4;
+    font-size: 20px;
+    letter-spacing: 2.5px;
+    text-align: center;
+    text-transform: uppercase;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.animated-button1:hover {
+    background: linear-gradient(-30deg, #4e0c0c 50%, #3c0909 50%);
+    transform: scale(1.05);
+}
+
+.animated-button1::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #ad8585;
+    opacity: 0;
+    transition: opacity 0.2s ease-in-out;
+}
+
+.animated-button1:hover::before {
+    opacity: 0.2;
+}
+
+.animated-button1 span {
+    position: absolute;
+}
+
+.animated-button1 span:nth-child(1) {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(to left, rgba(43, 8, 8, 0), #d92626);
+    animation: animateTop 2s linear infinite;
+}
+
+.animated-button1 span:nth-child(2) {
+    top: 0;
+    right: 0;
+    height: 100%;
+    width: 2px;
+    background: linear-gradient(to top, rgba(43, 8, 8, 0), #d92626);
+    animation: animateRight 2s linear -1s infinite;
+}
+
+.animated-button1 span:nth-child(3) {
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(to right, rgba(43, 8, 8, 0), #d92626);
+    animation: animateBottom 2s linear infinite;
+}
+
+.animated-button1 span:nth-child(4) {
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 2px;
+    background: linear-gradient(to bottom, rgba(43, 8, 8, 0), #d92626);
+    animation: animateLeft 2s linear -1s infinite;
+}
+
+@keyframes animateTop {
+    0% {
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+@keyframes animateRight {
+    0% {
+        transform: translateY(100%);
+    }
+    100% {
+        transform: translateY(-100%);
+    }
+}
+
+@keyframes animateBottom {
+    0% {
+        transform: translateX(-100%);
+    }
+    100% {
+        transform: translateX(100%);
+    }
+}
+
+@keyframes animateLeft {
+    0% {
+        transform: translateY(-100%);
+    }
+    100% {
+        transform: translateY(100%);
+    }
+}

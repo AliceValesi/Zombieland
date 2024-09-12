@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Informations Pratiques - Zombieland</title>
+    <link rel="stylesheet" href="/css/infos.css">
+    <link href="https://fonts.googleapis.com/css2?family=Creepster&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <img src="/images/logo.png" alt="Logo de Zombieland" width="150">
+        <nav>
+            <ul id="nav-links" aria-label="Navigation principale">
+                <li><a href="/">Accueil</a></li>
+                <li><a href="/attractions">Attractions</a></li>
+                <li><a href="/reservations">Réservations</a></li>
+                <li><a href="/infos" class="active">Informations pratiques</a></li>
+                <li><a href="/contact">Contact</a></li>
+                <li><a href="/connexion">Inscription/Connexion</a></li>
+            </ul>
+            <img src="/assets/icons8-menu-48.png" id="hamburger" aria-label="Menu hamburger" alt="Menu Hamburger" style="cursor: pointer; width: 40px;">
+        </nav>
+    </header>
+
+    <main>
+        <h1 class="creepy-text animate__animated animate__slideInDown">Informations Pratiques</h1>
+        <div class="info-container">
+            <h2>Horaires d'Ouverture</h2>
+            <p>Le parc est ouvert tous les jours de 9h à 18h.</p>
+
+            <h2>Tarifs</h2>
+            <p>Consultez notre site web pour les tarifs actualisés et les promotions spéciales.</p>
+
+            <h2>Emplacement</h2>
+            <p>La Tombe, Seine-et-Marne. Suivez la signalisation à partir de l'autoroute pour accéder facilement au parc.</p>
+
+            <h2>Mesures de Sécurité</h2>
+            <p>Nous suivons strictement les réglementations de sécurité nationales et locales pour garantir la sécurité de nos visiteurs. Des masques et du gel hydroalcoolique sont disponibles à l'entrée.</p>
+        </div>
+    </main>
+
+    <footer>
+        <p>© <%= new Date().getFullYear() %> Zombieland. Tous droits réservés.</p>
+    </footer>
+
+    <script src="/js/infos.js"></script>
+</body>
+</html>
