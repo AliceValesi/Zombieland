@@ -1,0 +1,10 @@
+<% include ../layout.ejs %>
+<h1>Liste des annonces</h1>
+<ul>
+  <% annonces.forEach(annonce => { %>
+    <li>
+      <a href="/annonces/<%= annonce.id %>"><%= annonce.title %></a>
+    </li>
+  <% }); %>
+</ul>
+<a href="/annonces/create">Créer une annonce</a>

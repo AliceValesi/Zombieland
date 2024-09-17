@@ -1,0 +1,23 @@
+{
+  "development": {
+    "username": "alice",
+    "password": "oui",
+    "database": "easy_market",
+    "host": "127.0.0.1",
+    "dialect": "postgres"
+  },
+  "test": {
+    "username": "alice",
+    "password": "oui",
+    "database": "easy_market_test",
+    "host": "127.0.0.1",
+    "dialect": "postgres"
+  },
+  "production": {
+    "username": "alice",
+    "password": "oui",
+    "database": "easy_market",
+    "host": "127.0.0.1",
+    "dialect": "postgres"
+  }
+}
